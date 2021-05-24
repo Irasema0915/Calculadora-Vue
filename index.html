@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+         ~ Calculadora ~
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div id="app">
+
+            <div class="calculator">
+                <div class="cal">
+                    {{ cal}}
+                </div>
+                <div class="value">
+                {{value}}
+                </div>
+                <div class="buttons">
+                <div v-on:click="borrar()" class="btn red"> C </div>
+                    <div v-on:click="sumar()" class="btn"> + </div>
+                    <div v-on:click="restar()" class="btn"> - </div>
+                    <div v-on:click="dividir()" class="btn"> / </div>
+                    <div v-for="x in 10" v-on:click="setModifier(x-1)" class="btn">
+                    {{ x-1}}
+                    </div>
+                    
+                    <div v-on:click="multiplicacion()" class="btn"> x </div>
+                    <div v-on:click="calcular()" class="btn ama"> = </div>
+                    
+
+
+                </div>
+
+            </div>
+        
+        </div>
+         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
